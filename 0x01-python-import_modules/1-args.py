@@ -13,7 +13,7 @@ def main(*argv):
         print("{:d} arguments:".format(length))
     for args in sys.argv:
         if (i != 0):
-            print("{}:  {}".format(i, args))
+            print("{}: {}".format(i, args))
         i += 1
 
 if __name__ == "__main__":
