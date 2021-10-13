@@ -1,4 +1,4 @@
->>> add_integer = __import__('0-add_integer).add_integer
+>>> add_integer = __import__('0-add_integer').add_integer
 
 >>> add_integer(0, 0)
 0
@@ -6,7 +6,7 @@
 0
 >>> add_integer(1, -1)
 0
->> add_integer(2)
+>>> add_integer(2)
 100
 >>> add_integer()
 Traceback (most recent call last):
@@ -30,4 +30,4 @@ OverflowError: cannot convert float infinity to integer
 >>> add_integer(1, float('nan'))
 Traceback (most recent call last):
 ...
-ValueError: cannot convert float to NaN to integer
+ValueError: cannot convert float NaN to integer
