@@ -1,7 +1,7 @@
-class Object:
+#!/usr/bin/python3
 '''return all attributes and methods'''
 
 
- def lookup(obj):
+    def lookup(obj):
     '''return all attributes and methods'''
-    return(dir(obj))
+        return(dir(obj))
