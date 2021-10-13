@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
     Adds 2 integers
-    Returns addition of a and b
+    Prototype: def add_integer(a, b=98)
+    Returns an integer: addition of a and b
 """
 
 
@@ -10,8 +11,8 @@ def add_integer(a, b=98):
     Raises TypeError: if either a or b is a non-int/float
     Returns the addition of a and b
     """
-    if (a is None or not isintance(a, int) and not isinstance(a, float)):
+    if (a is None or not isinstance(a, int) and not isinstance(a, float)):
         raise TypeError("a must be an integer")
-    if (not isinstance(b, int) and not isistance(b, float)):
+    if (not isinstance(b, int) and not isinstance(b, float)):
         raise TypeError("b must be an integer")
     return int(a) + int(b)
