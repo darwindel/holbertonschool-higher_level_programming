@@ -61,5 +61,6 @@ class Rectangle:
         for HEIGHT in range(self.height):
             for WIDTH in range(self.width):
                     newString += '#'
+            newString += "\n"
         newString = newString[:-1]
         return newString
