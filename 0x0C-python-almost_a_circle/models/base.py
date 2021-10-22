@@ -2,7 +2,7 @@
 """Base.py file"""
 
 
-class Base: 
+class Base:
     """Base class"""
 
     __nb_objects = 0
