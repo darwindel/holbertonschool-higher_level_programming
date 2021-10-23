@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Rectangle class file """
+"""File for Rectangle class"""
 from models.base import Base
 
 
@@ -7,7 +7,7 @@ class Rectangle(Base):
     """Rectangle class"""
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        """Rectangle instantiation"""
+        """Rectangle object instantiation"""
         super().__init__(id)
         self.__width = width
         self.__height = height
@@ -31,13 +31,13 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
 
     @property
-    def height(self)
+    def height(self):
         """gets height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """height setter"""
+        """setter for height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -51,7 +51,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        """width setter"""
+        """setter for width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -65,7 +65,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
-        """x setter"""
+        """setter for x"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -79,9 +79,9 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
-        """y setter"""
+        """setter for y"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
-            raise ValueError("y must be >= 0"
-        self.__y = value 
+            raise ValueError("y must be >= 0")
+        self.__y = value
