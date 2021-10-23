@@ -109,3 +109,13 @@ class Rectangle(Base):
             for _ in range(self.width):
                 print("#", end="")
             print("")
+
+    def update(self, *args, **kwargs):
+        """update rectangle by adding public method that assigns arguments"""
+        if (args and args is not []):
+            key = ["id", "width", "height", "x", "y"]
+            for i in range(0, len(args)):
+                setattr(self, key[i], args[i])
+        else:
+            for key in kwargs.keys():
+                setattr(self, key, kwargs[key])
