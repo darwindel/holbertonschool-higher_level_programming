@@ -8,11 +8,13 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """Rectangle object instantiation"""
+
         super().__init__(id)
         self.__width = width
         self.__height = height
         self.__x = x
         self.__y = y
+
         if type(height) is not int:
             raise TypeError("height must be an integer")
         if height <= 0:
@@ -29,6 +31,12 @@ class Rectangle(Base):
             raise TypeError("y must be an integer")
         if y < 0:
             raise ValueError("y must be >= 0")
+
+    def __str__(self):
+        """str method"""
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x,
+                                                       self.y, self.width,
+                                                       self.height)
 
     @property
     def height(self):
@@ -89,3 +97,15 @@ class Rectangle(Base):
     def area(self):
         """returns area of a rectangle"""
         return self.__width * self.__height
+
+    def display(self):
+        """prints the rectangle using # character"""
+        for _ in range(self.y):
+            print("")
+
+        for _ in range(self.height):
+            for _ in range(self.x):
+                print(" ", end="")
+            for _ in range(self.width):
+                print("#", end="")
+            print("")
