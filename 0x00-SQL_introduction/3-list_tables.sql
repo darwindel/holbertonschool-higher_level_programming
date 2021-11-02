@@ -1,2 +1,2 @@
 -- List all tables
-SELECT * FROM mysql;
+SELECT * FROM hbtn_0c_0;
