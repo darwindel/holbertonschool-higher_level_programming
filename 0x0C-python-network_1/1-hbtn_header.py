@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-from urrlib.request import urlopen
-from sys import argv as av
+import urllib.request
+import sys
 
 if __name__ == "__main__":
-    with urlopen(av[1]) as response:
-        headers = response.info()
-        header = "X-Request-Id"
-        print(headers.get(header))
+    with urllib.request.urlopen(sys.argv[1]) as response:
+        h = response.getheader('X-Request_Id')
+        print("{}".format(h))
