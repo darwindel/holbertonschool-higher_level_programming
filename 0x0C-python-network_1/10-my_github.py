@@ -5,8 +5,8 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    username = sys.argv[1]
-    password = sys.argv[2]
-    req = requests.get('https://api.github.com/user',
-                        profile=(username, password)
-    print(req.josn().get('id'))
+    user = sys.argv[1]
+    pw = sys.argv[2]
+    r = requests.get('https://api.github.com/user',
+                     auth=(user, pw))
+    print(r.json().get('id'))
