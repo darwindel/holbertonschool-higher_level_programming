@@ -2,8 +2,8 @@
 """ fetching url """
 import urllib.request
 
-with urllib.request.urlopen('https://intranet.hbtn.io/status') as response:
-    html = response.read()
+with urllib.request.urlopen('https://intranet.hbtn.io/status') as url:
+    html = url.read()
     print("Body response:")
     print("\t- type: {}".format(type(html)))
     print("\t- content: {}".format(html))
