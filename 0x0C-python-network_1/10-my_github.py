@@ -8,5 +8,5 @@ if __name__ == "__main__":
     user = sys.argv[1]
     password = sys.argv[2]
     req = requests.get('https://api.github.com/user',
-                     profile=(user, password))
+                     auth=(user, password))
     print(r.json().get('id'))
