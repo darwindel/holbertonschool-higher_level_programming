@@ -8,5 +8,5 @@ if __name__ == "__main__":
         with urllib.request.urlopen(argv[1]) as url:
             s.url.read()
             print(s.decode("utf-8"))
-     except urllib.error.HTTPError as message:
-        print('Error code: {}".format(message))
+    except urllib.error.HTTPError as message:
+        print('Error code: {}".format(message.code))
